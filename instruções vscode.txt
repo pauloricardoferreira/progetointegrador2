@@ -1,0 +1,15 @@
+#para instalar as dependências
+
+pip3 install --upgrade pip --no-cache-dir 
+
+pip3 install --no-cache-dir -r requirements.txt
+
+#primeira vez para configurar o banco
+
+python manage.py collectstatic --noinput
+python manage.py makemigrations app
+python manage.py migrate app
+
+#para subir a aplicação
+python manage.py runserver 0.0.0.0:8000"
+
