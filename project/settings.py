@@ -107,9 +107,9 @@ DATABASES = {
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': d5glj8vfk2psp6 #os.environ.get('POSTGRES_NAME'),
-        'USER': ydqglmkudpgiqn #os.environ.get('POSTGRES_USER'),
-        'PASSWORD': 8547f93d2a3a9cd8100d55e85aab416ee859784a9b969c9d413d0af03477d2de #os.environ.get('POSTGRES_PASSWORD'),
+        'NAME': 'd5glj8vfk2psp6' #os.environ.get('POSTGRES_NAME'),
+        'USER': 'ydqglmkudpgiqn' #os.environ.get('POSTGRES_USER'),
+        'PASSWORD': '8547f93d2a3a9cd8100d55e85aab416ee859784a9b969c9d413d0af03477d2de' #os.environ.get('POSTGRES_PASSWORD'),
         'HOST': 'ec2-44-205-41-76.compute-1.amazonaws.com',
         'PORT': 5432,
     }
