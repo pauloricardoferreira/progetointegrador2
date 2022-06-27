@@ -21,4 +21,4 @@ ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 ENV PYTHONPATH="$PYTHONPATH:/"
 
 
-#ENTRYPOINT [ "/bin/bash", "script.sh" ]
+ENTRYPOINT [ "/bin/bash", "./script.sh" ]
