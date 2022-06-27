@@ -20,4 +20,5 @@ COPY . /code/
 ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 ENV PYTHONPATH="$PYTHONPATH:/"
 
-#ENTRYPOINT [ "python3", "-u", "path/to/file/to/run" ]
+
+#ENTRYPOINT [ "/bin/bash", "script.sh" ]
