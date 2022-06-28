@@ -25,5 +25,6 @@ services:
       - POSTGRES_NAME=d5glj8vfk2psp6
       - POSTGRES_USER=ydqglmkudpgiqn
       - POSTGRES_PASSWORD=8547f93d2a3a9cd8100d55e85aab416ee859784a9b969c9d413d0af03477d2de
+      - POSTGRES_DB=ec2-44-205-41-76.compute-1.amazonaws.com
     #depends_on:
     #  - db
