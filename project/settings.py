@@ -27,9 +27,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-%wi19c82)q3z-rvrq3k$^=ier2toiavq+loox^!1zfi+6alq0x'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['.labs.play-with-docker.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -78,42 +78,25 @@ WSGI_APPLICATION = 'project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-"""
-
-#para usa o sqlite descomente essa linha
-DATABASES = {
+"""DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
-}
+}"""
 
-#para usar o postgres e docker, desconte essa linha
-"""
-"""
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': os.environ.get('POSTGRES_NAME'),
         'USER': os.environ.get('POSTGRES_USER'),
         'PASSWORD': os.environ.get('POSTGRES_PASSWORD'),
-        'HOST': 'db',
-        'PORT': 5432,
-    }
-}
-"""
-
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'd5glj8vfk2psp6' #os.environ.get('POSTGRES_NAME'),
-        'USER': 'ydqglmkudpgiqn' #os.environ.get('POSTGRES_USER'),
-        'PASSWORD': '8547f93d2a3a9cd8100d55e85aab416ee859784a9b969c9d413d0af03477d2de' #os.environ.get('POSTGRES_PASSWORD'),
         'HOST': 'ec2-44-205-41-76.compute-1.amazonaws.com',
         'PORT': 5432,
     }
 }
+
+
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
 

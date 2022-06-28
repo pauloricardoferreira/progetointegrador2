@@ -1,4 +1,4 @@
-FROM python:3.7
+FROM python:3.8
 
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
@@ -20,5 +20,4 @@ COPY . /code/
 ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 ENV PYTHONPATH="$PYTHONPATH:/"
 
-
-ENTRYPOINT [ "/bin/bash", "./script.sh" ]
+#ENTRYPOINT [ "python3", "-u", "path/to/file/to/run" ]

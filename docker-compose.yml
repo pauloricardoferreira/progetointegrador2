@@ -1,29 +1,29 @@
 version: "3.3"
    
 services:
-  db:
-    image: postgres
-    volumes:
-      - /data/db:/var/lib/postgresql/data
-    environment:
-      - POSTGRES_DB=postgres
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
-    ports:
-      - "5432:5432"
+  # db:
+  #   image: postgres
+  #   volumes:
+  #     - /data/db:/var/lib/postgresql/data
+  #   environment:
+  #     - POSTGRES_DB=postgres
+  #     - POSTGRES_USER=postgres
+  #     - POSTGRES_PASSWORD=postgres
+  #   ports:
+  #     - "5432:5432"
   web:
-    #build: .
-    image: pauloclean/projetointegrador:2
+    build: .
+    #image: pauloclean/projetointegrador:2
     command: >
-      sh -c "python manage.py collectstatic --noinput &&
-             python manage.py makemigrations app
-             python manage.py migrate app &&
-             python manage.py runserver 0.0.0.0:8000"
+      sh -c "python3 manage.py collectstatic --noinput &&
+             python3 manage.py makemigrations app
+             python3 manage.py migrate app &&
+             python3 manage.py runserver 0.0.0.0:8000"
     ports:
       - "8000:8000"
     environment:
-      - POSTGRES_NAME=postgres
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
-    depends_on:
-      - db
+      - POSTGRES_NAME=d5glj8vfk2psp6
+      - POSTGRES_USER=ydqglmkudpgiqn
+      - POSTGRES_PASSWORD=8547f93d2a3a9cd8100d55e85aab416ee859784a9b969c9d413d0af03477d2de
+    #depends_on:
+    #  - db
